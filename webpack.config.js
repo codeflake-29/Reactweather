@@ -1,0 +1,33 @@
+module.exports={
+    entry:'./app/app.jsx',
+    output:{
+        path:__dirname,
+        filename:'./public/bundle.js'
+    },
+    resolve:{
+        root:__dirname,
+        alias:{
+           main:'app/components/main.jsx',
+           nav:'app/components/nav.jsx',
+           weather:'app/components/weather.jsx',
+           about:'app/components/about.jsx',
+           examples:'app/components/examples.jsx',
+           weatherform:'app/components/weatherform.jsx',
+           weathermessage:'app/components/weathermessage.jsx',
+           openweatherMap:'app/api/openweatherMap.jsx'
+        },
+        extensions:['','.js','.jsx']
+    },
+    module:{
+        loaders:[
+            {
+                loader:'babel-loader',
+                query:{
+                    presets:['react','es2015']
+                },
+                test:/\.jsx?$/,
+                exclude:/(node_modules|bower_components)/
+            }
+        ]
+    }
+}
