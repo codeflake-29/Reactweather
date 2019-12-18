@@ -25799,7 +25799,15 @@
 	    'div',
 	    null,
 	    React.createElement(Nav, null),
-	    props.children
+	    React.createElement(
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
 	  );
 	};
 	module.exports = main;
@@ -27723,6 +27731,8 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
 	// const Examples=React.createClass({
 	//     render:function(){
 	//         return(
@@ -27733,9 +27743,40 @@
 
 	var Examples = function Examples(props) {
 	    return React.createElement(
-	        'h3',
+	        'div',
 	        null,
-	        'EXamples '
+	        React.createElement(
+	            'h1',
+	            { className: 'text-center' },
+	            'Examples '
+	        ),
+	        React.createElement(
+	            'p',
+	            null,
+	            'here are a few examples to try out:'
+	        ),
+	        React.createElement(
+	            'ol',
+	            null,
+	            React.createElement(
+	                'li',
+	                null,
+	                React.createElement(
+	                    Link,
+	                    { to: '/?location=philadelphia' },
+	                    'philadelphia'
+	                )
+	            ),
+	            React.createElement(
+	                'li',
+	                null,
+	                React.createElement(
+	                    Link,
+	                    { to: '/?location=rio' },
+	                    'rio,brazil'
+	                )
+	            )
+	        )
 	    );
 	};
 	module.exports = Examples;
