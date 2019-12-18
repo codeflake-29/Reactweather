@@ -10,7 +10,7 @@ const React=require('react')
 
 const Examples=(props)=>{
     return(
-        <h3>EXamples componenet</h3>
+        <h3>EXamples </h3>
     )
 }
 module.exports=Examples

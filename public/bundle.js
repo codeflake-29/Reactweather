@@ -27628,7 +27628,7 @@
 	    return React.createElement(
 	        'h3',
 	        null,
-	        'EXamples componenet'
+	        'EXamples '
 	    );
 	};
 	module.exports = Examples;
