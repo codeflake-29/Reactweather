@@ -14,7 +14,7 @@ const React=require('react')
 
 const weatherMessage=({temp,location})=>{
     return(
-        <h3>the weather of {temp} the region is {location} </h3>
+        <h3 className="text-center">the weather of {temp} the region is {location} </h3>
     )
 }
 module.exports=weatherMessage

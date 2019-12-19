@@ -25960,7 +25960,7 @@
 	            if (isLoading) {
 	                return React.createElement(
 	                    'h3',
-	                    null,
+	                    { className: 'text-center' },
 	                    'Fetching Weather...'
 	                );
 	            } else if (temp && location) {
@@ -25973,7 +25973,7 @@
 	            null,
 	            React.createElement(
 	                'h1',
-	                null,
+	                { className: 'text-center' },
 	                'Get Weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
@@ -26015,7 +26015,7 @@
 	                React.createElement('input', { type: 'text', ref: 'location' }),
 	                React.createElement(
 	                    'button',
-	                    null,
+	                    { className: 'button expanded hollow' },
 	                    'Get weather'
 	                )
 	            )
@@ -26028,7 +26028,7 @@
 /* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -26049,13 +26049,13 @@
 	        location = _ref.location;
 
 	    return React.createElement(
-	        'h3',
-	        null,
-	        'the weather of ',
+	        "h3",
+	        { className: "text-center" },
+	        "the weather of ",
 	        temp,
-	        ' the region is ',
+	        " the region is ",
 	        location,
-	        ' '
+	        " "
 	    );
 	};
 	module.exports = weatherMessage;
@@ -27702,7 +27702,7 @@
 /* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -27715,9 +27715,47 @@
 	// })
 	var About = function About(props) {
 	    return React.createElement(
-	        'h3',
+	        "div",
 	        null,
-	        'About componenet'
+	        React.createElement(
+	            "h3",
+	            { className: "text-center" },
+	            "About "
+	        ),
+	        React.createElement(
+	            "p",
+	            null,
+	            "this is a application built on react. i have built this for complete react app web developer course"
+	        ),
+	        React.createElement(
+	            "p",
+	            null,
+	            "some of the tools i used"
+	        ),
+	        React.createElement(
+	            "ul",
+	            null,
+	            React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                    "a",
+	                    { href: "https://google.com" },
+	                    "Google"
+	                ),
+	                "this was from where i learnt"
+	            ),
+	            React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    "open weather map"
+	                ),
+	                " i use open weather app to search for weather data bu=y city anme"
+	            )
+	        )
 	    );
 	};
 
