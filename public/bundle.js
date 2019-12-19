@@ -28273,7 +28273,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title{\n    margin-top: 2.5rem;\n    margin-bottom: 2.5rem;\n}\n\ninput[type=search]{\n    box-shadow: none;\n}\n.heading{\n    margin-top: 2.5rem;\n    margin-bottom: 2.5rem;\n    font-size: 5rem;\n    font-family: sans-serif;\n    font-style: italic;\n    font-weight: bold;\n    padding: 1rem;\n    \n    background-image: linear-gradient(green,yellow);\n    background-clip: text;\n}", ""]);
+	exports.push([module.id, "\n\n.page-title{\n    color: purple;\n    margin-top: 5.5rem;\n    margin-bottom: 5.5rem;\n}\n\ninput[type=search]{\n    box-shadow: none;\n}\n.heading{\n    color: brown;\n    margin-top: 2.5rem;\n    margin-bottom: 2.5rem;\n    font-size: 5rem;\n    font-family: sans-serif;\n    font-style: italic;\n    font-weight: bold;\n    padding: 1rem;\n    \n    background-image: linear-gradient(green,yellow);\n    background-clip: text;\n}", ""]);
 
 	// exports
 

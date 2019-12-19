@@ -1,12 +1,16 @@
+
+
 .page-title{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    color: purple;
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
 }
 
 input[type=search]{
     box-shadow: none;
 }
 .heading{
+    color: brown;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     font-size: 5rem;
