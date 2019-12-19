@@ -10,7 +10,7 @@ const React=require('react')
 const About=(props)=>{
     return(
         <div>
-        <h3 className="text-center">About </h3>
+        <h3 className="text-center heading">About </h3>
         <p>this is a application built on react. i have built this for complete react app web developer course</p>
         <p>some of the tools i used</p>
         <ul>
