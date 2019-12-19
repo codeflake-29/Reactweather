@@ -2,6 +2,7 @@ const React=require('react')
 const WeatherForm=require('weatherform')
 const WeatherMessage=require('weathermessage')
 const openweatherMap=require('openweatherMap')
+const ErrorModal=require('errorModal')
 
 const Weather=React.createClass({
     getInitialState:function(){
@@ -14,29 +15,27 @@ const Weather=React.createClass({
     handleSearch:function(location){
         const that=this
         
-        that.setState({isLoading:true})
+        this.setState({
+            isLoading:true,
+            errorMessage:undefined})
         
         openweatherMap.getTemp(location).then(function(temp){
             that.setState({
                 location:location,
                 temp:temp,
-                isLoading:false
+                isLoading:false,
+                
             })
-        },function(errorMessage){
+        },function(res){
             
-            that.setState({isLoading:false,
-                location:'default',
-                temp:'default'
+            that.setState({
+                isLoading:false,
+                errorMessage:res.message
         })
-            alert(errorMessage)
         })
-        // this.setState({
-        //     location:location,
-        //     temp:23
-        // })
     },
     render:function(){
-        const {isLoading,temp,location}=this.state
+        const {isLoading,temp,location,errorMessage}=this.state
 
         function renderMessage(){
             if(isLoading){
@@ -45,12 +44,22 @@ const Weather=React.createClass({
                 return <WeatherMessage temp={temp} location={location}/>
             }
         }
+    function renderError(){
+        if(typeof errorMessage === 'string'){
+            return (
+                <ErrorModal message={errorMessage} title={'test'}/>
+            )
+        }
+    }
+
+    
 
         return(
             <div>
             <h1 className="text-center">Get Weather</h1>
             <WeatherForm onSearch={this.handleSearch}/>
             {renderMessage()}
+            {renderError()}
             </div>
             
         )
